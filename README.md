@@ -19,4 +19,4 @@ Repositório para armazenar aulas e atividades realizadas no IFPR no curso de An
 - [Documentação JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/javascript).
 - [Documentação Java](https://docs.oracle.com/en/java/).
 
-op
+Alterações para ver se vai
