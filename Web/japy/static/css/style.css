@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    list-style: none;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover{
+    cursor: pointer;
+    color: rgb(100, 99, 99);
+
+}
+button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: "Poppins";
+    letter-spacing: .9px;
+    border: 0;
+    background: #1d61dd;
+    color: white;
+    cursor: pointer;
+}
+
+header {
+    background: no-repeat center/cover url("../img/jap_back.jpg");
+    height: 100vh;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    margin: auto 90px;
+    
+}
+
+header nav ul {
+    display: flex;
+    width: 85%;
+}
+header nav ul a{
+    color: white;
+}
+header nav ul li {
+    margin: 0 15px;
+
+}
+
+header nav p {
+    display: flex;
+    justify-self: start;
+    font-weight: bold;
+    transform: translate(10px, 5px);
+}
+header nav p a{
+    color: black;
+}
+header nav img {
+    width: 70px;
+    margin-top: 10px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+    margin: 150px auto;
+    text-align: center;
+
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.header-content h1 {
+    margin-bottom: 10px;
+    font-size: 3rem;
+}
+
+.pacotes .pacotes-title {
+    width: 100%;
+    text-align: center;
+    margin:25px 0;
+    font-size: 3rem;
+}
+
+.pacotes {
+    background: #EAE2B7;
+    padding: 15px;
+}
+
+.pacotes .pacotes-card {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.pacotes .card-image {
+    width: 100%;
+    height: 250px;
+    border-radius: 0 70px 20px 10px;
+    transform: translate(0px, 7px);
+}
+
+.pacotes .card {
+    width: 400px;
+    height: 400px;
+    background: white;
+    border-radius: 24px 0 20px 10px;
+    margin: 25px;
+    position: relative;
+}
+
+.pacotes .card .minfo{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2.5%;
+    padding: 0;
+}
+.pacotes .card .minfo h4{
+    height: 0;
+}
+.pacotes .card .minfo p{
+    width: 90%;
+    font-size: .9rem;
+}
+.pacotes .card h1{
+    width: 100%;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.pacotes .card-content {
+    width: 90%;
+    padding: 0 15px;
+}
+
+.pacotes .card-content ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.pacotes .card-content ul li {
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    margin: 3px 0;
+    color: #003049;
+    font-weight: bold;
+}
+
+.pacotes .card-content li i {
+    font-size: 18px;
+    margin-right: 5px;
+}
+.pacotes .card-content li svg {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.pacotes .card-content h1 {
+    font-size: 1rem;
+}
+
+.pacotes .card .card-tag p {
+    margin:0;
+    font-size: 0.8rem;
+    color: white;
+    font-weight: bold;
+}
+
+.relato {
+    padding: 15px;
+}
+
+.relato .relato-title {
+    text-align: center;
+    margin: 35px 0;
+}
+
+.relato .content_info{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1050px;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 8%;
+}
+
+.relato img {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    border-radius: 10px 10px;
+}
+
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #003049;
+    color: whitesmoke;
+}
+.contatos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #273142;
+    color: white;
+    font-size: 0.8rem;
+}
+.contatos ul{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+.contatos ul li a{
+    display: flex;
+    color: white;
+}
+.contatos a:hover{
+    color: #e4a691;
+}
+.contatos ul li p{
+    margin: 3px;
+}
+.contatos p{
+    font-size: 0.7rem;
+}
