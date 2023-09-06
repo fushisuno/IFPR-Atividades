@@ -5,7 +5,6 @@ public class arq {
     static Scanner ler = new Scanner(System.in);
 
     public static void main(String[] args){
-        String message = "Testa com arquivos java";
 
         try{
             PrintWriter saida = new PrintWriter("./Java/Arquivos/Txt/numeros.txt");
