@@ -5,11 +5,14 @@ const reservadas = [];
 
 
 window.addEventListener("load", ()=>{
+    const ocupadas = localStorage.getItem("teatroOcupadas") ? localStorage.getItem("teatroOcupadas").split(";"): [];
+
     for(let i = 1;i < 241; i++){
       const figure = document.createElement("figure");
       const imgStatus = document.createElement("img");
 
-      imgStatus.src = "./assets/img/ocupada.jpg";
+      imgStatus.src = ocupadas.includes(i.toString()) ? "./assets/img/ocupada.jpg" : "./assets/img/disponivel.jpg";
+      imgStatus.className = "poltrona"
 
       const figureCap = document.createElement("figcaption");
       
