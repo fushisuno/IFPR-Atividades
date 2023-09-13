@@ -15,7 +15,7 @@ Repositório para armazenar aulas e atividades realizadas no IFPR no curso de An
 |  Web | 05/09/23 | Prova sobre JavaScript |  HTML, CSS, JS  |
 | Banco de Dados | 11/09/23 | Aprendendo a usar procedimentos(procedure)| MySql|
 | Java | 12/09/23 | Escrita em arquivos e seus métodos             | Java|
-|  Web | 12/09/23 | |  HTML, CSS, JS  |
+|  Web | 12/09/23 | Criando uma sala de reservas de teatro |  HTML, CSS, JS  |
 
 
 
