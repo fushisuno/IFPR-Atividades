@@ -1,0 +1,357 @@
+:root{
+  --urlImageHome1: 'https://images8.alphacoders.com/133/1330107.png'
+  --urlImageHome2: 'https://images.alphacoders.com/132/1327530.jpeg'
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap');
+
+html{
+  width: 100%;
+  min-height: 100%;
+  color: #000;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+/*        Header           */
+.header-container{
+  width: 100%;
+  height: 4.875rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.header-container .header-bar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 4.875rem;
+}
+.header-bar .header_logo{
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-bar .header_logo span a{
+  text-decoration: none;
+  color: #000;
+}
+.header-bar .header_search{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header_search .search__box{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  border-radius: 24px;
+  border: 1px solid #efefef;
+  height: 40px;
+  transition: .2s all;
+  position: relative;
+  background-color: #efefef;
+}
+
+
+.header_search .search__box #search-input{
+  width: 90%;
+  height: 100%;
+  border-radius: 24px;
+  border: 0;
+  padding: 0 .5rem 0;
+  background-color: transparent;
+}
+input {
+  border-radius: 8px;
+  outline: none;
+  overflow: visible;
+}
+
+.header-bar .header_main_menu{
+  width: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.header_main_menu a{
+  color: #000;
+}
+
+.header-bar .header_socials{
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header_socials .socials{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+
+  padding-left: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.header-bar .header_accont{
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  color: #000;
+  z-index: 100000;
+}
+
+.header-bar .header_accont button{
+  position: absolute;
+  border: 0px;
+  background-color: inherit;
+}
+.header-bar .header_accont button i{
+  font-size: 1.5rem;
+}
+
+.header-bar .header_accont .accont_popver_items_hiden{
+  width: 10rem;
+  height: 6rem;
+  position: relative;
+  top: 6rem;
+  display: flex;
+  justify-content: center;
+  background-color: #FFFF;
+  box-shadow: rgb(0 0 0 / 20%) 0px 7px 36px -8px;
+  border-radius: 8px;
+}
+.accont_popver_items_show{
+  display: none;
+}
+
+.header_accont .accont_popver_items_hiden .accont_popver_items_list{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 0px !important;
+  margin-bottom: 0px !important;
+}
+.accont_popver_items_hiden .accont_popver_items_list li{
+  width: 100%;
+  border-bottom: 1px solid rgba(4, 4, 5, 0.1);
+}
+
+.accont_popver_items_list li a{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+
+  white-space: nowrap;
+  text-align: right;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  line-height: 1rem;
+  padding: .5rem 1rem;
+}
+.accont_popver_items_list li a:hover{
+  color: #18193f;
+}
+
+
+/*        Main         */
+main .main_container{
+  width: 100%;
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  background-image: url('https://images.alphacoders.com/132/1327530.jpeg') !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #FFFF;
+}
+.main_container h1{
+  font-size: 4.8rem;
+  letter-spacing: .625rem;
+  padding: 3rem 0;
+  text-transform: uppercase;
+}
+.main_container .main_info_gaming{
+  max-width: 44rem;
+  text-align: justify;
+}
+.main_container .btn input[type='button']{
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  width: 12rem;
+  height: 2rem;
+  border: none;
+  border-radius: .2rem;
+  margin-top: 1rem;
+  padding: 0 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.main_container .btn #btnStem{
+  background-color: inherit;
+  color: #FFFF;
+  border: solid;
+}
+.btn a #btnStem:hover{
+  cursor: pointer;
+  background-color: #FFFF;
+  color: #000;
+  border: none;
+}
+
+.main_container .btn #btnYouGame{
+  background-color: #18193f;
+  color: #FFFF;
+}
+.btn a #btnYouGame:hover{
+  cursor: pointer;
+  background-color: inherit;
+  color: #FFFF !important;
+  border: solid;
+}
+
+/* https://i.pinimg.com/originals/dc/39/16/dc3916a04792b84ce3d024f32fe91930.jpg */
+
+
+
+
+
+
+
+/*        Games         */
+main .games_list{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.games_list .cards_games_list{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cards_games_list .card_game{
+  width: 16rem;
+  margin: 1rem 1rem;
+  display: inline-block;
+  position: relative;
+  border-radius: 1rem;
+  box-shadow: rgb(0 0 0 / 50%) 0px 7px 36px -8px;
+  margin-bottom: 2rem;
+}
+.cards_games_list .card_game .card_image{
+  width: 100%;
+  height: 22rem;
+}
+
+.cards_games_list .card_game .card_image img{
+  width: 100%;
+  height: 22rem;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card_game .card_content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_game .card_content span{
+  font-size: 1.5rem;
+  padding: .625rem 0;
+}
+
+.card_game .card_content ul{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 0px !important;
+  margin-bottom: 0px !important;
+}
+.card_game .card_content li{
+  padding: 0 .625rem;
+}
+.card_game .card_content li i{
+  font-size: 1.3rem;
+}
+
+.card_game .card_price{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card_game .card_price input{
+  margin-top: 1rem;
+  width: 8rem;
+  background-color: inherit;
+  border: solid #18193f;
+}
+.card_game .card_price input:hover{
+  background-color: #18193f;
+  color: #FFFF;
+}
+
+.card_game .card_price span{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card_game .card_price img{
+  width: 3rem;
+  height: 20%;
+  padding: 0 .625rem;
+}
+.card_game .card_price p{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}

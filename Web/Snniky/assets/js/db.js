@@ -3,6 +3,10 @@ function criarTable(){
   db.transaction((criar) => {
     criar.executeSql("CREATE TABLE IF NOT EXISTS usuarios (ID INTEGER PRIMARY KEY, nome TEXT, senha TEXT)");
   });
+
+  db.transaction((criar) => {
+    criar.executeSql("CREATE TABLE IF NOT EXISTS games (ID INTEGER PRIMARY KEY, nome TEXT, url TEXT, hours TEXT, )");
+  });
 }
 
 function save(nome, senha){

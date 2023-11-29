@@ -7,14 +7,13 @@ window.onload = function(){
     criarTable()
 }
 
-
+/*
 frm.addEventListener("submit", (e) => {
     var nome = document.querySelector("#nome").value
     var senha = document.querySelector("#senha").value
     save(nome, senha)
     //deletes()
 });
-
 
 bntList.addEventListener('click', (e) => {
     e.preventDefault()
@@ -23,3 +22,4 @@ bntList.addEventListener('click', (e) => {
         document.querySelector("#users_list").innerHTML += `<h2>Id: ${element.id} - Nome: ${element.nome} - Senha: ${element.senha}</h2>`
     });
 })
+*/
