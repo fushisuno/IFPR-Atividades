@@ -17,6 +17,13 @@ Repositório para armazenar aulas e atividades realizadas no IFPR no curso de An
 | Java | 12/09/23 | Escrita em arquivos e seus métodos             | Java|
 |  Web | 12/09/23 | Criando uma sala de reservas de teatro |  HTML, CSS, JS  |
 
+##
+
+##  Resumos das Aulas 2°Ano
+
+|  Aulas  |  Data  |  Descrição  |  Tecnologias  |
+|---------|--------|-------------|---------------|
+|  Poo | 08/02/24 | ..... |  Java  |
 
 
 ## 🔍 Referências
