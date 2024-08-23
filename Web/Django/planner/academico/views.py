@@ -23,3 +23,8 @@ class ProfessorView(APIView):
 
         #se o serializer não for valido, retorna erro 400
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    def get(self, request):
+        professors = Professor.objects.all()
+        serializer = ProfessorSerializer(professors, many = True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
