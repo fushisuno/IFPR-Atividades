@@ -44,3 +44,27 @@ class UsuarioReadUpdateDeleteView(APIView):
         usuario = get_object_or_404(Usuario, pk=pk)
         usuario.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+class PrescricaoReadUpdateDeleteView(APIView):
+    def get(self, request, pk):
+        prescricao = get_object_or_404(Prescricao, pk=pk)
+        try:
+            prescricao = Prescricao.objects.get(pk=pk)
+        except:
+            return Response({'detail': 'Prescricao inexistente'}, status=status.HTTP_404_NOT_FOUND)
+        
+        serializer = PrescricaoSerializer(prescricao)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+class PrescricaoMedicamentoCreateUpdateView(APIView):
+    def post(self, request, *args, **kwargs):
+        serializer = PrescricaoMedicamentoCreateUpdateSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    def get(self, request, *args, **kwargs):
+        prescricoes = Prescricao.objects.all()  # Recupera todas as prescrições
+        serializer = PrescricaoMedicamentoRetrieveSerializer(prescricoes, many=True)  # Usa o serializer para a listagem
+        return Response(serializer.data, status=status.HTTP_200_OK)
