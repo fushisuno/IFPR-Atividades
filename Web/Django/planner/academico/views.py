@@ -1,12 +1,30 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework import generics
 from rest_framework import status
+from django_filters import rest_framework as filters
 from django.shortcuts import get_object_or_404
 
-
 #importando modelos e serializers
-from .models import Professor, Curso, Disciplina
-from .serializers import ProfessorSerializer, CursoSerializer, DisciplinaSerializer, DisciplinaCreateUpdateSerializer
+from .models import *
+from .serializers import *
+from rest_framework.permissions import AllowAny 
+
+class UserRegisterAPIView(APIView):
+    permission_classes = [AllowAny] # Permite acesso público a este endpoint
+    def post(self, request, *args, **kwargs):
+        serializer = UserSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()  
+            ''' Usado para criar um user e ja loga-lo no sistema
+            # Cria o token para o novo usuário
+            token, created = Token.objects.get_or_create(user=user)
+            return Response({"user": serializer.data, "token": token.key}, status=status.HTTP_201_CREATED)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+            '''
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class ProfessorView(APIView):
 
@@ -78,12 +96,26 @@ class CursoListCreateAPIView(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+class DisciplinaFilter(filters.FilterSet):
+    curso = filters.CharFilter(field_name="curso__nome", lookup_expr='icontains')
+    professor = filters.CharFilter(field_name="professor__nome", lookup_expr='icontains')
+    conteudos_programaticos = filters.CharFilter(
+        field_name="conteudos_programaticos__descricao", lookup_expr='icontains'
+    )
+    nome = filters.CharFilter(field_name="nome", lookup_expr='icontains')
 
-class DisciplinaListCreateAPIView(APIView):
-    def get(self, request):
-        disciplinas = Disciplina.objects.all()
-        serializer = DisciplinaSerializer(disciplinas, many=True)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+    class Meta:
+        model = Disciplina
+        fields = ['curso', 'professor', 'conteudos_programaticos', 'nome']
+
+class DisciplinaListView(generics.ListAPIView):
+    queryset = Disciplina.objects.all()
+    serializer_class = DisciplinaSerializer
+    filter_backends = (filters.DjangoFilterBackend,)
+    filterset_class = DisciplinaFilter
+
+
+class DisciplinaCreateAPIView(APIView):
 
     def post(self, request):
         serializer = DisciplinaCreateUpdateSerializer(data=request.data)
@@ -123,3 +155,12 @@ class DisciplinaRetrieveUpdateDestroyAPIView(APIView):
         disciplina.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
     
+
+class DisciplinaConteudoCreateView(APIView):
+    def post(self, request, *args, **kwargs):
+        serializer = DisciplinaConteudoCreateUpdateSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
