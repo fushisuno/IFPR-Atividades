@@ -1,3 +1,5 @@
 **.vscode
 **.venv
 **venv
+**/nodemodules
+**/node_modules

@@ -1,0 +1,1 @@
+export type ExpenseCategory = 'jogos' | 'alimentação' | 'lazer' | 'internet' | 'investimento' | 'outros'
